@@ -1,5 +1,5 @@
 import { useEffect, useContext } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { ContatoContext } from "../contexts/ContatoContext";
 
 function Home() {
@@ -9,6 +9,10 @@ function Home() {
     listarContatos();
   }, []);
 
+  function handleRemover(event) {
+    event.preventDefault();
+  }
+
   return (
     <>
       <h1>Home</h1>
@@ -16,7 +20,9 @@ function Home() {
       <ul>
         {meusContatos.map((contato, key) => (
           <li key={key}>
-            {contato.nome} - {contato.telefone}
+            {contato.nome} - {contato.telefone}{" "}
+            <Link to={`/editar/${contato.id}`}>Editar</Link>{" "}
+            <Link to={`/remover/${contato.id}`}>Remover</Link>
           </li>
         ))}
       </ul>

@@ -1,19 +1,9 @@
 {
   "contatos": [
     {
-      "id": "a8b3",
-      "nome": "Maria",
-      "telefone": "88888-8888"
-    },
-    {
       "id": "524a",
       "nome": "Jose",
       "telefone": "9999-9999"
-    },
-    {
-      "id": "4429",
-      "nome": "Pedro",
-      "telefone": "77777-7777"
     }
   ]
 }
