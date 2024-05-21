@@ -4,6 +4,7 @@ import { AuthContext } from "./contexts/AuthContext";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Perfil from "./pages/Perfil";
+import Novo from "./pages/Novo";
 import Layout from "./components/Layout";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         {user.logado ? (
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
+            <Route path="/novo" element={<Novo />} />
             <Route path="/perfil/:id" element={<Perfil />} />
           </Route>
         ) : (
